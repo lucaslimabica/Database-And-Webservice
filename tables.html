@@ -1,0 +1,43 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Units</h2>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Unit</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for unit in units %}
+        <tr>
+            <td>{{ unit.unit }}</td>
+            <td>{{ unit.description }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h2>Sensors</h2>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>Sensor ID</th>
+            <th>Location ID</th>
+            <th>Name</th>
+            <th>Unit</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for sensor in sensors %}
+        <tr>
+            <td>{{ sensor.idSensor }}</td>
+            <td>{{ sensor.idLocation }}</td>
+            <td>{{ sensor.name }}</td>
+            <td>{{ sensor.unit }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
